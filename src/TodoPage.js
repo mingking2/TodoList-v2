@@ -3,6 +3,7 @@ import TodoInsert from "./TodoComponents/TodoInsert";
 import TodoList from "./TodoComponents/TodoList";
 import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const databaseURL = "https://sangjeong-9bfd9-default-rtdb.firebaseio.com"; // 데이터베이스 링크 변수
 
@@ -81,6 +82,7 @@ const TodoPage = () => {
 
   return (
     <div>
+      <Link to="/">홈으로 이동</Link>
       <h1>Todo List Page</h1>
       {
         <TodoTemplate>

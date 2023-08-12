@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 const WeatherPage = () => {
   const [weather, setWeather] = useState(null);
@@ -25,13 +25,14 @@ const WeatherPage = () => {
   if (!weather) {
     return (
       <div>
+        <Link to="/">홈으로 이동</Link>
         <h1>Weather Page</h1>
         <p>날씨 정보를 불러오는 중...</p>
       </div>
     );
   }
 
-  console.log(weather);
+
   const { name, main, weather: weatherInfo } = weather;
   const temperature = main.temp;
   const temperatureCelsius = (temperature - 273.15).toFixed(1); // 섭씨 변환 및 소수점 첫째 자리까지
@@ -40,6 +41,7 @@ const WeatherPage = () => {
 
   return (
     <div>
+      <Link to="/">홈으로 이동</Link>
       <h1>Weather Page</h1>
       <p>지역: {name}</p>
       <p>현재 기온: {temperatureCelsius} °C</p>

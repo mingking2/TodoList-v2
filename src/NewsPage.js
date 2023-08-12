@@ -1,6 +1,8 @@
 import Categories from "./NewsComponent/Categories";
 import { useParams } from "react-router-dom"; // useParams를 가져옴
 import NewsList from "./NewsComponent/NewsList";
+import { Link } from 'react-router-dom';
+
 
 const NewsPage = () => {
   // useParams 훅을 사용하여 category 값을 추출
@@ -11,6 +13,7 @@ const NewsPage = () => {
 
   return (
     <div>
+      <Link to="/">홈으로 이동</Link>
       <h1>News Page</h1>
       <Categories />
       <NewsList category={selectedCategory} />

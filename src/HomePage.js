@@ -11,6 +11,9 @@ const HomePage = () => {
             <Link to="/news">News</Link>
           </li>
           <li>
+            <Link to="/movie">Movie</Link>
+          </li>
+          <li>
             <Link to="/weather">Weather</Link>
           </li>
           <li>
